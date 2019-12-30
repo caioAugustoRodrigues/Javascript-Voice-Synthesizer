@@ -1,0 +1,94 @@
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: rgb(28, 92, 82);
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+
+  background-image:
+  radial-gradient(circle at 100% 150%, rgb(28, 92, 82) 24%, rgb(21, 66, 59) 25%, rgb(21, 66, 59) 28%, rgb(28, 92, 82) 29%, rgb(28, 92, 82) 36%, rgb(21, 66, 59) 36%, rgb(21, 66, 59) 40%, transparent 40%, transparent),
+  radial-gradient(circle at 0    150%, rgb(28, 92, 82) 24%, rgb(21, 66, 59) 25%, rgb(21, 66, 59) 28%, rgb(28, 92, 82) 29%, rgb(28, 92, 82) 36%, rgb(21, 66, 59) 36%, rgb(21, 66, 59) 40%, transparent 40%, transparent),
+  radial-gradient(circle at 50%  100%, rgb(21, 66, 59) 10%, rgb(28, 92, 82) 11%, rgb(28, 92, 82) 23%, rgb(21, 66, 59) 24%, rgb(21, 66, 59) 30%, rgb(28, 92, 82) 31%, rgb(28, 92, 82) 43%, rgb(21, 66, 59) 44%, rgb(21, 66, 59) 50%, rgb(28, 92, 82) 51%, rgb(28, 92, 82) 63%, rgb(21, 66, 59) 64%, rgb(21, 66, 59) 71%, transparent 71%, transparent),
+  radial-gradient(circle at 100% 50%, rgb(21, 66, 59) 5%, rgb(28, 92, 82) 6%, rgb(28, 92, 82) 15%, rgb(21, 66, 59) 16%, rgb(21, 66, 59) 20%, rgb(28, 92, 82) 21%, rgb(28, 92, 82) 30%, rgb(21, 66, 59) 31%, rgb(21, 66, 59) 35%, rgb(28, 92, 82) 36%, rgb(28, 92, 82) 45%, rgb(21, 66, 59) 46%, rgb(21, 66, 59) 49%, transparent 50%, transparent),
+  radial-gradient(circle at 0    50%, rgb(21, 66, 59) 5%, rgb(28, 92, 82) 6%, rgb(28, 92, 82) 15%, rgb(21, 66, 59) 16%, rgb(21, 66, 59) 20%, rgb(28, 92, 82) 21%, rgb(28, 92, 82) 30%, rgb(21, 66, 59) 31%, rgb(21, 66, 59) 35%, rgb(28, 92, 82) 36%, rgb(28, 92, 82) 45%, rgb(21, 66, 59) 46%, rgb(21, 66, 59) 49%, transparent 50%, transparent);
+  background-size:100px 50px;
+}
+
+.voiceinator {
+  padding: 2rem;
+  width: 50rem;
+  margin: 0 auto;
+  border-radius: 1rem;
+  position: relative;
+  background: white;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
+}
+
+h1 {
+  width: calc(100% + 4rem);
+  margin: -2rem 0 2rem -2rem;
+  padding: .5rem;
+  background: #ffc600;
+  border-bottom: 5px solid #F3C010;
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 100;
+  font-family: 'Pacifico', cursive;
+  text-shadow: 3px 3px 0 #F3C010;
+}
+
+.voiceinator input,
+.voiceinator button,
+.voiceinator select,
+.voiceinator textarea {
+  width: 100%;
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  border: 0;
+  font-size: 2rem;
+  background: #F7F7F7;
+  outline: 0;
+}
+
+textarea {
+  height: 20rem;
+}
+
+input[type="select"] {
+
+}
+
+.voiceinator button {
+  background: #ffc600;
+  border: 0;
+  width: 49%;
+  float: left;
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 0;
+  font-size: 2rem;
+  border-bottom: 5px solid #F3C010;
+  cursor: pointer;
+  position: relative;
+}
+
+.voiceinator button:active {
+  top: 2px;
+}
+
+.voiceinator button:nth-of-type(1) {
+  margin-right: 2%;
+}
