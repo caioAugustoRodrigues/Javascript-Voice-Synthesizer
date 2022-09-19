@@ -36,6 +36,10 @@
   const speakButton = document.querySelector('#speak');
   const stopButton = document.querySelector('#stop');
   msg.text = document.querySelector('[name="text"]').value;
+  
+  var synth = new Windows.Media.SpeechSynthesis.SpeechSynthesizer();
+
+           
 
   function populateVoices() {
     voices = this.getVoices();
@@ -55,6 +59,14 @@
     const stop = speechSynthesis.cancel();
     if (startOver) {
     speechSynthesis.speak(msg);
+      SpeechSynthesisStream stream = await msg.SynthesizeTextToStreamAsync(msg.voice);
+
+      using (var reader = new DataReader(stream))
+      {
+          await reader.LoadAsync((uint)stream.Size);
+          IBuffer buffer = reader.ReadBuffer((uint)stream.Size);
+          await FileIO.WriteBufferAsync(outputFile, buffer);
+      }
     }
   }
 
